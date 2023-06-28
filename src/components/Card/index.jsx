@@ -3,18 +3,7 @@ import PropTypes from "prop-types";
 
 //card Component
 
-const CardComponent = ({
-  imgSrc,
-  imgAlt,
-  title,
-  description,
-  link,
-  content,
-  context,
-   text,
-  onClick,
-  
-}) => {
+const CardComponent = ({imgSrc, imgAlt,title, description,link,content,context, text,onClick,}) => {
   return (
     <div className="col-4 my-2 ">
       <div className="card shadow">
