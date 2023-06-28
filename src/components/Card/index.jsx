@@ -12,10 +12,10 @@ const CardComponent = ({
   context,
    text,
   onClick,
-  datakey
+  
 }) => {
   return (
-    <div className="col-4 my-2 key={datakey}">
+    <div className="col-4 my-2 ">
       <div className="card shadow">
         <div className="card-body row mb-6">
           <div className="d-flex col-2">

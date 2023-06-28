@@ -8,7 +8,7 @@ import CardComponent from "./components/Card";
 
 function App() {
   const [data, setdata] = useState([]);
-  const [record, setrocord] = useState([]);
+  const [record, setrecord] = useState([]);
   const [show, setShow] = useState(false);
 
   //modal states
@@ -30,13 +30,13 @@ function App() {
 
   function submit(e) {
     e.preventDefault();
-    setrocord([...record, data]);
+    setrecord([...record, data]);
   }
 
   function deleteItem(id) {
     const task = [...record];
     task.splice(id, 1);
-    setrocord(task);
+    setrecord(task);
   }
 
   return (
@@ -124,7 +124,7 @@ function App() {
               <Form.Group className="mb-3" controlId="formGridAddress1">
                 <Form.Label>Contact</Form.Label>
                 <Form.Control
-                  placeholder="Contact"
+                  placeholder="+91"
                   name="contact"
                   onChange={onchangeHandler}
                   required
@@ -159,9 +159,9 @@ function App() {
                 </Form.Group>
                 </Col>
               </Row>
-              <Button  type="submit" onClick={handleClose}>
-                Add
-              </Button>
+              <Buttons  text="ADD" class="btn btn-primary my-1" type="submit" htmlType="primary" onClick={handleClose}>
+                
+              </Buttons>
             </Form>
           </Modal.Body>
         </Modal>
