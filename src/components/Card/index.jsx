@@ -1,4 +1,5 @@
 import Buttons from "../Button";
+import PropTypes from "prop-types";
 
 //card Component
 
@@ -64,6 +65,14 @@ const CardComponent = ({
       </div>
     </div>
   );
+};
+
+
+
+CardComponent.propTypes = {
+  imgSrc: PropTypes.any.isRequired,
+  onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
 };
 
 export default CardComponent;
