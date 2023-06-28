@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 import JsonData from "../components/Data";
-import "C:/Users/Ditsdev/Desktop/react-assignment-2/myapp/node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "react-bootstrap";
-import Buttons from "../components/Button";
 import CardComponent from "../components/Card";
 
 function JsonDataDisplay() {
   const [data, setdata] = useState(JsonData);
 
   function deleteItem(id) {
-    debugger
+    debugger;
     const action = [...data];
-
     action.splice(id, 1);
-
     setdata(action);
   }
 
@@ -35,8 +31,6 @@ function JsonDataDisplay() {
                   context={info.time}
                   link={info.date}
                 />
-
-                
               );
             })}
           </div>

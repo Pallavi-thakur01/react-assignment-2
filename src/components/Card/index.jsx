@@ -1,5 +1,3 @@
-import "C:/Users/Ditsdev/Desktop/react-assignment-2/myapp/node_modules/bootstrap/dist/css/bootstrap.min.css";
-
 import Buttons from "../Button";
 
 //card Component
@@ -13,10 +11,11 @@ const CardComponent = ({
   content,
   context,
    text,
-  onClick
+  onClick,
+  datakey
 }) => {
   return (
-    <div className="col-4 my-2">
+    <div className="col-4 my-2 key={datakey}">
       <div className="card shadow">
         <div className="card-body row mb-6">
           <div className="d-flex col-2">
@@ -38,14 +37,14 @@ const CardComponent = ({
               )}
             </div>
             <div className="d-flex  text-muted">
-              {description   &&(<p>{description},{(text && <small>{text}</small>)}</p>)}
+              {description   &&(<p>{description} yrs,{(text && <small>{text}</small>)}</p>)}
 
             </div>
           </div>
 
           <div className="row d-flex mb-3">
             <div className="col d-flex">
-              {content && <h4 className="card-text">{content} </h4>}
+              {content && <h4 className="card-text">+91 {content} </h4>}
             </div>
             <div className="d-flex ">
               <a style={{ textDecoration: "none" }} href="#">

@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import JsoninforDisplay from "./pages/Appointment";
@@ -55,7 +54,7 @@ function App() {
         </h1>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title> Enter Details</Modal.Title>
+            <Modal.Title> Enter Appointment Details</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={submit}>
@@ -106,7 +105,7 @@ function App() {
                       type="radio"
                       label="Female"
                       name="gender"
-                      value="female"
+                      value="Female"
                       id="formHorizontalRadios1"
                       onChange={onchangeHandler}
                     />
@@ -114,7 +113,7 @@ function App() {
                       type="radio"
                       label="Male"
                       name="gender"
-                      value="male"
+                      value="Male"
                       id="formHorizontalRadios2"
                       onChange={onchangeHandler}
                     />
@@ -133,8 +132,9 @@ function App() {
               </Form.Group>
 
               <Row className="mb-3">
+                <Col>
                 <Form.Label>Date</Form.Label>
-                <Form.Group controlId="duedate">
+                <Form.Group  controlId="duedate">
                   <Form.Control
                     type="date"
                     name="duedate"
@@ -144,8 +144,9 @@ function App() {
                     required
                   />
                 </Form.Group>
-
-                <Form.Group as={Col} controlId="formGridState">
+                   </Col>
+                   <Col>
+                <Form.Group  controlId="formGridState">
                   <Form.Label>Time</Form.Label>
                   <Form.Control
                     type="time"
@@ -156,8 +157,9 @@ function App() {
                     required
                   />
                 </Form.Group>
+                </Col>
               </Row>
-              <Button type="submit" onClick={handleClose}>
+              <Button  type="submit" onClick={handleClose}>
                 Add
               </Button>
             </Form>
@@ -171,7 +173,7 @@ function App() {
               return (
                  <CardComponent
                   imgSrc={info.pic}
-                  imgAlt="Card Image "
+                  imgAlt="Card Image"
                   title={info.name}
                   description={info.age}
                   text={info.gender}
