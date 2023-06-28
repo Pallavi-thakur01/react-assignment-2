@@ -15,7 +15,7 @@ function App() {
   //modal states
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
- console.log(data);
+ 
 
 
   function onchangeHandler(e) {
